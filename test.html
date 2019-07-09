@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "aboutMeStyle.css"
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+}
+
+#Home {background-color: #7fd7f5;}
+#News {background-color: orange;}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#7fd7f5')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'orange')" id="defaultOpen">News</button>
+
+<div id="Home" class="tabcontent">
+  <h1> About Me Page </h1>
+
+  <img src = "https://lavanya261201.github.io/Official-WHS-DECA-site/images/vp_marketing.JPG" height = "300" width = "300" class="center" alt = "A picture of Rishika"/>
+
+  <h2> Intro: </h2>
+
+  <p> Hey! I’m Rishika, and I’m a rising senior at Washington High School. I was born and raised in Fremont, but that doesn’t mean I don’t like to travel to other places. I’d consider myself a social introvert, for it can be pretty difficult for me to start talking to people, but once I have a conversation, I can really open myself up to them. I love hanging out with friends, and I’m most definitely a foodie constantly looking for someone who’d be willing to start a food account with me where we constantly just rate restaurants we’ve been to. </p>
+
+  <img src = "https://upload.wikimedia.org/wikipedia/commons/e/ee/Washington_Union_High_School_%28Fremont%2C_CA%29.JPG" height = "300" class="center" alt = "A picture of Washington High School"/>
+
+  <h2> Hobbies: </h2>
+
+  <p> I like to dance, and I teach 5-8 and 9-12 year olds how to dance for the Mona Khan Company. I love video editing, and whenever I go on trips, I love making travel diaries. I enjoy swimming (but not competitively), and will always enjoy a day on the beach. </p>
+
+  <img src = "http://ww1.prweb.com/prfiles/2016/09/07/13668703/naachnation.jpg" height = "300" class="center" alt = "A picture of a Mona Khan Company showcase"/>
+
+  <p> I'm a part of a CTSO called DECA that encourages high schoolers to explore the fields of marketing, hospitality and tourism, business management, and finance. </p>
+
+  <img src = "https://www.californiadeca.org/wp/wp-content/uploads/2018/05/State-Photo.jpg" height = "300" class="center" alt = "A picture of the California DECA delegation at Internationals"/>
+
+  <h2> Fun fact: </h2>
+
+  <p> I created a domestic violence organization called <a href = "https://www.instagram.com/riseagainstviolence/?hl=en" target = "_blank"> R.I.S.E.</a> Against Domestic Violence to raise awareness for domestic violence and help victims find financial stability after leaving their abusers. </p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h1> Places I'd Like to Travel To </h1>
+  <p> Bora Bora </p>
+  <p> <img src = "https://dbijapkm3o6fj.cloudfront.net/resources/1608,1004,1,6,4,0,1600,900/-4153-/20190322132344/stay-minimum-3-nights-save-25-with-breakfast-included-bora-bora-pearl-beach-resort-spa.jpeg" height = "300" width = "500" class="center" alt ="A picture of a resort in Bora Bora on the beach"/> </p>
+  <p> Santorini </p>
+  <p> <img src = "https://lonelyplanetwp.imgix.net/2016/04/Santorini-53c9e0dca77b.jpg?fit=min&q=40&sharp=10&vib=20&w=1470" height = "300" width = "500" class="center" alt = "A picture of town area in Santorini"/> </p>
+  <p> Italy </p>
+  <p> <img src = "https://d36tnp772eyphs.cloudfront.net/blogs/1/2011/05/italy-1200x815.jpg" width = "500" class = "center" alt = "A picture of gondolas in Italy"/>
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
